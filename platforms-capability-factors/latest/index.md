@@ -1,14 +1,13 @@
 ---
 title: "CNCF Platform Capability Factors"
+subtitle: "An approach to grow internal platforms beyond bottlenecks into thriving marketplaces"
 version_info: https://github.com/Cloud-Native-Platform-Engineering/cnpe-community/tree/main/platforms-capability-factors/README.md
 description: "Platforms provide the tools organizations need to deliver under increased speed and safety expectations, but scaling a single centralized platform group often trades short-term relief for long-term limitations. This paper proposes a platform marketplace model where domain experts contribute and operate capabilities independently while a thin platform layer keeps them discoverable, composable, and governable, and introduces five testable capability factors that determine whether a capability can participate in that marketplace safely at scale."
 type: whitepapers
 url: whitepapers/platform-capability-factors
-toc_hide: true
-list_pages: false
+# Weight controls ordering in the Resources sidebar nav.
+weight: 30
 ---
-
-## An approach to grow internal platforms beyond bottlenecks into thriving marketplaces
 
 ## Abstract
 
@@ -48,9 +47,9 @@ The question is not whether a centralized platform team can build high-quality c
 
 ## The Role of the Centralized Platform Group
 
-Despite the challenges with overcentralization of platform building, a level of centralized tooling is still useful for maintaining a coherent experience. This leads to the temptation to treat fragmentation, user experience, and operational load as a single tooling gap, and to believe that choosing the single right platform technology or buying a specific vendor solution will solve these challenges. Choosing any product or technology requires making a trade-off decision between flexibility and usability (cognitive load). More opinionated platforms trade flexibility for simplified usability over a smaller set of use-cases. Less opinionated platforms trade onboarding complexity for greater flexibility over a broader set of use-cases.
+Despite the challenges with overcentralization of platform building, a level of centralized tooling is still useful for maintaining a coherent experience. This leads to the temptation to treat fragmentation, user experience, and operational load as a single tooling gap, and to believe that choosing the single right platform technology or buying a specific vendor solution will solve these challenges. Choosing any product or technology requires making a trade-off decision between flexibility and usability ([cognitive load]({{< ref "/resources/glossary/latest#cognitive-load" >}})). More opinionated platforms trade flexibility for simplified usability over a smaller set of use-cases. Less opinionated platforms trade onboarding complexity for greater flexibility over a broader set of use-cases.
 
-Platform engineering is the creation of an opinionated platform for a specific organization. An un-opinionated internal platform is effectively the same as giving consumers direct access to a public cloud console but with less community or support. Once an organization makes the decision to invest in an internal platform, choosing vendors or tech stacks becomes a matter of compatibility: does the solution allow the blend of flexibility vs cognitive load the organization requires.
+[Platform engineering]({{< ref "/resources/glossary/latest#platform-engineering" >}}) is the creation of an opinionated platform for a specific organization. An un-opinionated internal platform is effectively the same as giving consumers direct access to a public cloud console but with less community or support. Once an organization makes the decision to invest in an internal platform, choosing vendors or tech stacks becomes a matter of compatibility: does the solution allow the blend of flexibility vs cognitive load the organization requires.
 
 Challenges with centralised group platform management are not limited to large organizations with multiple platform teams. They can show up wherever:
 
@@ -86,7 +85,7 @@ A capability is the unit of participation in a platform marketplace model. The [
 
 A good capability deliberately encapsulates a domain by providing a clear boundary that hides unnecessary complexity from consumers while exposing relevant configuration choices. Thoughtful encapsulation and product sense expose a complex domain into a platform capability that a consumer can use without needing to become an expert first. As with any abstraction, the value comes from what it chooses not to expose. For example, implementing OpenTelemetry doesn't need direct expertise in the format of spans or how to export data; that is encapsulated within the choice of the language SDK. The same logic can be applied to a platform capability. It is the choice of the capability producer to consider how complex, or simple, their API surface needs to be in order to enable the use cases required by their consumers.
 
-Three main roles emerge in a healthy platform marketplace that maps onto to the "capability provider", "platform user", and "platform team" roles described in the CNCF Platforms Glossary:
+Three main roles emerge in a healthy platform marketplace that maps onto to the ["capability provider"]({{< ref "/resources/glossary/latest#platform-capability-provider" >}}), ["platform user"]({{< ref "/resources/glossary/latest#platform-users" >}}), and ["platform team"]({{< ref "/resources/glossary/latest#platform-team" >}}) roles described in the CNCF Platforms Glossary:
 
 - **Capability producers** are the specialist teams who build, contribute, and maintain capabilities, and they are accountable for satisfying the factors described below.
 - **Capability consumers** are the teams that request and use capabilities in the platform.
@@ -195,7 +194,7 @@ One rule decides what counts as a factor: a property qualifies as a factor when 
 
 A capability must define one API through which consumers provision, configure, update, observe, and delete their instances, without needing to know how the capability is built. Behind that API, producers are free to choose and change languages, runtimes, infrastructure, and automation, and to evolve those choices over time. The API carries a stable identifier, and if the contract changes, producers should publish a new version rather than mutate the existing one, so that consumers are not broken by a change they did not request.
 
-Whatever sits above the API (for example, a command-line tool, a web portal, an AI agent, an internal developer portal) is an interface choice, not a capability requirement. The same holds true across application environments - the API surface does not change just because the capability is deployed somewhere new, and environment-specific configuration is expressed as ordinary inputs to the same contract or is calculated by the capability itself, not through a separate interface.
+Whatever sits above the API (for example, a command-line tool, a [web portal]({{< ref "/resources/glossary/latest#portal" >}}), an AI agent, an internal developer portal) is an interface choice, not a capability requirement. The same holds true across application environments - the API surface does not change just because the capability is deployed somewhere new, and environment-specific configuration is expressed as ordinary inputs to the same contract or is calculated by the capability itself, not through a separate interface.
 
 This is what makes self-service work at scale. The contract simply defines inputs and output ensuring a consumer does not need to coordinate with the producer, learn a capability's implementation details, or discover additional entry points in order to use the capability.
 
