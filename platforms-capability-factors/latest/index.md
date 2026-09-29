@@ -333,7 +333,7 @@ A capability satisfies this factor when authorized actors can answer the questio
 
 The cost of failing this factor is that the platform can neither govern nor diagnose the capability reliably, and consumers must fall back on producer support to understand their capability's health, status, governance posture, or accountability.
 
-### Applying the Capability Factors
+## Applying the Capability Factors
 
 These factors define the properties that allow independently produced capabilities to participate safely in a shared platform marketplace. Together, they make explicit the trade-offs between keeping operational complexity within a capability's own boundaries and pushing avoidable cost onto consumers or the platform.
 
