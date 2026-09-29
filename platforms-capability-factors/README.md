@@ -25,5 +25,5 @@ The figures in `latest/assets/` are exported from
 [`latest/assets/capability-factors-figures.drawio`](./latest/assets/capability-factors-figures.drawio),
 one tab per figure in page order (some figures also have a landscape tab). Open it in
 [diagrams.net](https://app.diagrams.net/) or the draw.io desktop app; the styles are embedded, so
-no shape library is needed. After editing, export the tab as PNG at 2x with a white background and
+no shape library is needed. After editing, export the tab as PNG at 2x with a transparent background and
 replace the matching file in `latest/assets/`.
