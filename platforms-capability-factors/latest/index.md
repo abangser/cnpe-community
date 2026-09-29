@@ -92,6 +92,13 @@ Three main roles emerge in a healthy platform marketplace that maps onto to the 
 - **Platform operators** own and run the core platform infrastructure through which capabilities are discovered, composed, and governed, and they build the guardrails that make the conformant path the easy path.
 
 <figure align="center">
+<img src="assets/marketplace-roles-and-exchanges.png" width=550px />
+<br/>
+<figcaption align="center"><em>Capability producers and capability consumers exchange managed outcomes on request; platform operators govern the exchange through the participation contract and offer a self-service catalog.</em></figcaption>
+</figure>
+<br/>
+
+<figure align="center">
 <img src="assets/capability-marketplace-flow.png" width=550px />
 <br/>
 <figcaption align="center"><em>Capability producers create and manage capability definitions through a producer API; capability consumers discover and use instances of those capabilities through a consumer API.</em></figcaption>
@@ -184,7 +191,7 @@ One rule decides what counts as a factor: a property qualifies as a factor when 
 <figure align="center">
 <img src="assets/capability-factors-overview.png" width=550px />
 <br/>
-<figcaption align="center"><em>Capability producers and capability consumers exchange managed outcomes on request; platform operators govern the exchange through the participation contract, made verifiable by the five capability factors.</em></figcaption>
+<figcaption align="center"><em>The five capability factors. Operational Evidence is what makes the other four verifiable.</em></figcaption>
 </figure>
 <br/>
 
